@@ -10,7 +10,7 @@ def CalculateVolume(faces):
     return volume
 
 def main():
-    mesh = np.load('../Meshes/unit_cube_qppp.npy')
+    mesh = np.load('../Meshes/shell.npy')
     faces = list()
     for face in mesh:
         faces.append(Face(face))
