@@ -22,6 +22,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Face.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="VolumeCalculator.py" />
   </ItemGroup>
   <PropertyGroup>
