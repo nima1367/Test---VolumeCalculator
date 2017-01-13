@@ -10,11 +10,15 @@ def CalculateVolume(faces):
     return volume
 
 def main():
-    mesh = np.load('../Meshes/shell.npy')
-    faces = list()
-    for face in mesh:
-        faces.append(Face(face))
-    volume = CalculateVolume(faces)
+    meshes = {'unit_cube_qppp': np.load('../Meshes/unit_cube_qppp.npy'),
+              'shell': np.load('../Meshes/shell.npy'),
+              'Robot_Maker_Faire_65pc': np.load('../Meshes/Robot_Maker_Faire_65pc.npy')}
+
+    for importedArray in meshes.keys(): 
+        faces = list()
+        for face in meshes[importedArray]:
+            faces.append(Face(face))
+        volume = CalculateVolume(faces)
     input()
 
 if __name__ == "__main__":
