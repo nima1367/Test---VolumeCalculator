@@ -16,6 +16,8 @@ class Face:
           
         self.Vertices = vertices
         initialNormal = NormalFinder(vertices)
+
+        # this line calculates the magnitude of the cross product
         crossMagn = math.sqrt(sum(initialNormal[i]*initialNormal[i] for i in range(3)))
         
         # Normalize the obtained normal vector:
