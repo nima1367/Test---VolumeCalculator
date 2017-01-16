@@ -35,6 +35,8 @@ def main():
         for face in meshes[importedArray]:
             faces.append(Face(face))
         volume = CalculateVolume(faces)
+        
+        # Compare the obtained results with the given numbers in the .sh file
         test = round(volume, 10) - preCalculatedValues[importedArray] == 0.0
         toPrint = ''
         if (test):
